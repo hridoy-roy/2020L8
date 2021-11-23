@@ -10,4 +10,7 @@ class DashboardController extends Controller
         // dd(auth()->user());
         return view('dashboard');
     }
+    public function home(){
+        return view('home');
+    }
 }

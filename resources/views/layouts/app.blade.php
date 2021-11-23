@@ -14,10 +14,10 @@
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Post</a>
@@ -32,12 +32,15 @@
                             <a class="nav-link active" aria-current="page" href="#">Hridoy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Logout</a>
+                          <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn nav-link">Logout</button>
+                          </form>
                         </li>
                         @endauth
                        @guest
                        <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
