@@ -28,7 +28,9 @@ Route::post('/logout',[logoutController::class, 'index'])->name('logout');
 
 Route::get('/home',[DashboardController::class, 'home'])->name('home');
 
-Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard',[DashboardController::class, 'index'])
+        ->name('dashboard');
+        // ->middleware('auth');
 
 Route::get('/', function () {
     return view('posts.post');

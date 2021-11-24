@@ -29,7 +29,7 @@
                         {{-- @if (auth()->user()) --}}
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Hridoy</a>
+                            <a class="nav-link active" aria-current="page" href="#">{{ auth()->user()->name }}</a>
                         </li>
                         <li class="nav-item">
                           <form action="{{ route('logout') }}" method="POST">
