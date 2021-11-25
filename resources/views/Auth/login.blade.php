@@ -24,6 +24,12 @@
                     <div class=" mt-2 p-1 alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="col-10 mx-auto my-0">
+              <div class="form-check">
+                <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+            </div>
             <div class="col-10 mx-auto my-5">
               <button type="submit" class="btn btn-primary w-100">Log in</button>
             </div>

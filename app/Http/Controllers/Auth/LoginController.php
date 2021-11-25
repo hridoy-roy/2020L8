@@ -21,11 +21,9 @@ class LoginController extends Controller
         ]);
 
 
-        if(!auth()->attempt($request->only('email','name','password'))){
+        if(!auth()->attempt($request->only('email','name','password'),$request->remember)){
             return back()->with('state', "Invalide login details");
         }
-       
-
          return redirect()->route('dashboard');
     }
 }
